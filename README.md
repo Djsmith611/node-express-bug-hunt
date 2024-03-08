@@ -25,8 +25,51 @@ TODO: Add the error here followed by the line of code you fixed.
 Fixed `quote.router.js` line 28: switch `app` to `router`. _This is the solution to the first bug._
 
 ### Bug 1
+`TypeError: Router.use() requires a middleware function but got a Object`
 
-...
+Fixed `quote.router.js` line 33: Added `module.exports = router;`.
+
+### Bug 2
+`Cannot GET /` `Failed to load resource: the server responded with a status of 404 (Not Found)`
+
+Fixed `server.js` line 18: changed `server` to `server/public`.
+
+### Bug 3
+`GET http://localhost:5007/quotes 404 (Not Found)`
+
+Fixed `client.js` line 7: Changed `/quotes}` to `/quotes`.
+
+### Bug 4
+`GET http://localhost:5007/quotes%7D 404 (Not Found)`
+
+Fixed `quote.router.js` line 10: changed `/quotes` to `/`.
+
+### Bug 5
+`TypeError: quotesFromServer is not iterable`
+
+Fixed `quote.router.js` line 6: changed `{}` to `[]`.
+
+### Bug 6
+`POST http://localhost:5007/quotes 500 (Internal Server Error)`
+
+Fixed `quote.router.js` line 24: changed `quotesList.push` to `quoteList.push`.
+
+### Bug 7
+`ReferenceError: getQuote is not defined`
+
+Fixed `client.js` line 52: changed `getQuote` to `getQuotes`.
+
+### Bug 8
+No `DOCTYPE` attribute.
+Fixed `index.html` line 1: added `DOCTYPE` attribute.
+
+### Bug 9
+`client.js` line 24 and 16: commented out `i` as it had no function.
+
+### Bug 10
+`quote.router.js` line 11: added `res.status(200)` to set the status to OK.
+
+
 
 ## Extra Practice (Optional)
 
